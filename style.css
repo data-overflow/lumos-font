@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Rouge+Script&display=swap');
+
+@font-face {
+    font-family: RomanWood;
+    src: url("./fonts/Roman-Wood-Type-JNL.ttf");
+}
+
+@font-face {
+    font-family: NukuNuku;
+    src: url("./fonts/nuku.ttf");
+}
+
+@font-face {
+    font-family: Rage;
+    src: url("./fonts/RAGE.ttf");
+}
+/* 
+:root {
+    text-shadow: unset !important;
+} */
+
+body {
+    margin: 0;
+    background-color: #111;
+}
+
+#hero {
+    background-image: url("./images/background.jpeg");
+    height: 40vh;
+    width: 100%;
+    /* transform: rotate(90deg); */
+}
+
+.lumos {
+    font-family: RomanWood, serif;
+    color: white;
+    font-size: 48px;
+    margin: auto;
+    margin-left: 40%;
+}
+
+.nuku {
+    font-family: NukuNuku;
+    color: white;
+    font-size: 70px;
+    margin: 0;
+    /* object-fit: cover; */
+}
+
+.rage {
+    font-family: Rage, cursive;
+    color: white;
+    margin: 0;
+    /* margin-left: 10em; */
+    font-size: 32px;
+}
+
+.cursive {
+    font-family: 'Rouge Script';
+    color: white;
+    font-size: 24px;
+    margin-left: 60%;
+}
+
+.text {
+    font-family: 'Comfortaa', cursive;
+    color: #bbb;
+    font-size: 20px;
+    margin-left: 0%;
+}
+
+.title {
+    text-align: center;
+    /* width: 1000px; */
+    width: 100vw;
+    left: 0%;
+    position: absolute;
+    margin: auto;
+    display:inline;
+
+    /* left: 50%; */
+    /* transform: translate(-25%); */
+}
+
+.red {
+    color: #f45;
+}
+.video-wrapper {
+    /* Telling our absolute positioned video to 
+    be relative to this element */
+    position: relative;
+  
+    width: 96%;
+    left: 2%;
+    top: 5%;
+    height: 60vh;
+  
+    /* Will not allow the video to overflow the 
+    container */
+    overflow: hidden;
+  
+    /* Centering the container's content vertically 
+    and horizontally */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    /* text-shadow: 1px 1px 8px; */
+    /* margin-left: 4%; */
+    margin-top: 4%;
+}
+
+video {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    filter: brightness(40%) contrast(80%);
+
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+	/* max-width: 90rem; */
+    /* width: 10VW; */
+    /* position: absolute;
+    left: 10px;
+    right: 100px;
+    padding: -100px; */
+    /* margin: -100px; */
+	/* margin: 0 auto; */
+	padding: 0 2rem 2rem;
+}
+
+.heading {
+	font-family: NukuNuku, "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #fff;
+}
+
+.heading span {
+	display: block;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	flex: 1 0 24rem;
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+    filter: contrast(50%) brightness(50%);
+}
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+		grid-gap: 1rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
+
+@media screen and (min-width: 760px) {
+    .lumos {
+        font-size: 70px;
+        margin-left: 50%;
+    }
+
+    .cursive{
+        font-size: 48px;
+        margin-left: 70%;
+    }
+
+    .rage {
+        margin-left: 30%;
+    }
+    .text {
+        margin-left: 30%;
+    }
+    @supports (display: grid) {
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+            grid-gap: 1rem;
+        }
+    
+        .gallery,
+        .gallery-item {
+            margin: 0;
+        }
+    }
+}
